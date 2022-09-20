@@ -1,0 +1,164 @@
+/*  COLORES IMAGEN EN HEXA-DECIMAL
+
+    Marron clarito -> #DBB88E
+    Marron oscuro -> #451000
+    Azul turquesa -> #34BAC6
+    Azul oscuto -> #1e5f65
+
+*/
+body {
+    
+    background-image: url(fondo1.jpg);
+    background-size: contain;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+#wrapper {
+    display: grid;
+    grid-template-areas: "header header header"
+    "menu . noticia";
+    padding: 1%;
+    margin: 1%;
+
+
+}
+
+#header {
+
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "logo . titulo";
+   /* background-color: #DBB88E;*/
+    background-color: #DBB88E;
+    color: #451000;
+    border-radius: 10px;
+    padding: 5px;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+#menu {
+
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-right: 15px;
+
+}
+    /*  ESTILOS NOTICIA */
+#noticia {
+
+    margin-top: 20px;
+    margin-right: 500px;
+
+    padding: 10px;
+
+    border-radius: 30px;
+    background: #f7f5e7;
+    grid-area: noticia;
+    text-align: justify;
+    font-size: 15px;
+
+
+}
+.card {
+
+
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid #451000;
+    transition: all .2s;
+    box-shadow: 12px 12px 2px 1px #451000;
+   }
+   
+.card:hover {
+    box-shadow: -12px 12px 2px -1px #451000;
+}
+
+.texto-noticia{
+    max-width: 60ch;
+    padding: 20px;
+    line-height : 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-size: 15px;
+
+}
+
+.titulo-noticia{
+
+    background-color: #1e5f65;
+    color: #fff;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+    /*  --- */
+#header img {
+    grid-area: logo;
+    border-radius: 20px;
+    width: 200px;
+}
+
+#header span {
+    grid-area: titulo;
+    font-size: 100px;
+    text-align: center;
+
+}
+
+/* From uiverse.io */
+button {
+    --color: #34BAC6;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #451000;
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #451000;
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+button:hover {
+    color: #fff;
+}
+
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+button:active:before {
+    background: #34BAC6;
+    transition: background 0s;
+}
+
